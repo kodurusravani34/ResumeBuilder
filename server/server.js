@@ -32,4 +32,8 @@ app.use("/api/users", userRouter);
 app.use("/api/resumes", resumeRouter);
 app.use("/api/ai", aiRouter);
 
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Server running on port ${process.env.PORT || 3000}`);
+});
+
 export default app;
