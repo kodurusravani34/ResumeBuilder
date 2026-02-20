@@ -45,8 +45,8 @@ const generateSummary = async () => {
                 <p className='text-sm text-gray-500'>Add summary for your resume here</p>
             </div>
 
-           <button disabled={isGenerating} onClick={generateSummary} className='flex items-center gap-2 px-3 py-1 text-sm bg-purple-100 text-purple-700 rounded hover:bg-purple-200 transition-colors
-                disabled:opacity-50'>
+           <button disabled={isGenerating} onClick={generateSummary} className='flex items-center gap-2 px-3 py-1 text-sm bg-orange-100 text-red-700 rounded hover:bg-orange-200 transition-colors
+             disabled:opacity-50'>
                     {isGenerating ? (
                     <Loader2 className="size-4 animate-spin" />
                     ) : (
@@ -57,8 +57,8 @@ const generateSummary = async () => {
         </div>
 
         <div className="mt-6">
-            <textarea value={data || ""} onChange={(e) => onChange(e.target.value)} rows={7} className='w-full p-3 px-4 mt-2 border text-sm border-gray-300 rounded-lg focus: ring focus: ring-blue-500
-            focus: border-blue-500 outline-none transition-colors resize-none' 
+            <textarea value={data || ""} onChange={(e) => onChange(e.target.value)} rows={7} className='w-full p-3 px-4 mt-2 border text-sm border-gray-300 rounded-lg focus: ring focus: ring-orange-500
+            focus: border-orange-500 outline-none transition-colors resize-none' 
             placeholder='Write your professional summary here'/>
 
             <p className='text-xs text-gray-500 max-w-4/5 mx-auto text-center'>Tip:

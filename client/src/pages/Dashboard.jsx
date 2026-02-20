@@ -132,14 +132,14 @@ const Dashboard = () => {
 bg-clip-text text-transparent sm:hidden">Welcome, Joe Doe</p>
 
         <div className='flex gap-4'>
-          <button onClick={() => setShowCreateResume(true)} className='w-full bg-white sm:max-w-36 h-48 flex flex-col items-center justify-center rounded-lg gap-2 text-slate-600 border border-dashed border-slate-300 group hover:border-indigo-500 hover:shadow-lg transition-all duration-300 cursor-pointer'>
-            <PlusIcon className="size-11 transition-all duration-300 p-2.5 bg-gradient-to-br from-indigo-300 to-indigo-500 text-white rounded-full" />
-            <p className='text-sm group-hover: text-indigo-600 transition-all duration-300'>Create Resume</p>
+          <button onClick={() => setShowCreateResume(true)} className='w-full bg-white sm:max-w-36 h-48 flex flex-col items-center justify-center rounded-lg gap-2 text-slate-600 border border-dashed border-slate-300 group hover:border-orange-500 hover:shadow-lg transition-all duration-300 cursor-pointer'>
+            <PlusIcon className="size-11 transition-all duration-300 p-2.5 bg-gradient-to-br from-orange-300 to-orange-500 text-white rounded-full" />
+            <p className='text-sm group-hover: text-orange-600 transition-all duration-300'>Create Resume</p>
           </button>
 
-          <button onClick={() => setShowUploadResume(true)} className='w-full bg-white sm:max-w-36 h-48 flex flex-col items-center justify-center rounded-lg gap-2 text-slate-600 border border-dashed border-slate-300 group hover:border-purple-500 hover:shadow-lg transition-all duration-300 cursor-pointer'>
-            <UploadCloudIcon className="size-11 transition-all duration-300 p-2.5 bg-gradient-to-br from-purple-300 to-purple-500 text-white rounded-full" />
-            <p className='text-sm group-hover: text-purple-600 transition-all duration-300'>Upload Existing Resume</p>
+          <button onClick={() => setShowUploadResume(true)} className='w-full bg-white sm:max-w-36 h-48 flex flex-col items-center justify-center rounded-lg gap-2 text-slate-600 border border-dashed border-slate-300 group hover:border-red-500 hover:shadow-lg transition-all duration-300 cursor-pointer'>
+            <UploadCloudIcon className="size-11 transition-all duration-300 p-2.5 bg-gradient-to-br from-red-300 to-red-500 text-white rounded-full" />
+            <p className='text-sm group-hover: text-red-600 transition-all duration-300'>Upload Existing Resume</p>
           </button>
         </div>
 
@@ -179,10 +179,10 @@ bg-clip-text text-transparent sm:hidden">Welcome, Joe Doe</p>
           <form onSubmit={createResume} onClick={() => setShowCreateResume(false)} className='fixed inset-0 bg-black/70 backdrop-blur bg-opacity-50 z-10 flex items-center justify-center'>
             <div onClick={e => e.stopPropagation()} className='relative bg-slate-50 border shadow-md rounded-lg w-full max-w-sm p-6'>
               <h2 className='text-xl font-bold mb-4'>Create a Resume</h2>
-              <input onChange={(e) => setTitle(e.target.value)} value={title} type="text" placeholder='Enter resume title' className='w-full px-4 py-2 mb-4 focus:border-green-600 ring-green-600' required />
+              <input onChange={(e) => setTitle(e.target.value)} value={title} type="text" placeholder='Enter resume title' className='w-full px-4 py-2 mb-4 focus:border-orange-600 ring-orange-600' required />
 
-              <button className='w-full py-2 bg-green-600 text-white rounded
-                hover:bg-green-700 transition-colors'>Create Resume</button>
+              <button className='w-full py-2 bg-red-600 text-white rounded
+                hover:bg-orange-700 transition-colors'>Create Resume</button>
               <XIcon className='absolute top-4 right-4 text-slate-400
                 hover: text-slate-600 cursor-pointer transition-colors'
                 onClick={() => { setShowCreateResume(false); setTitle('') }} />
@@ -199,11 +199,11 @@ bg-clip-text text-transparent sm:hidden">Welcome, Joe Doe</p>
               <div>
                 <label htmlFor="resume-input" className='block text-sm text-slate-700'>
                   Select resume file
-                  <div className='flex flex-col items-center justify-center gap-2 border group text-slate-400 border-slate-400 border-dashed rounded-md p-4 py-10 my-4 hover:border-green-500
-                      hover:text-green-700 cursor-pointer transition-colors'>
+                    <div className='flex flex-col items-center justify-center gap-2 border group text-slate-400 border-slate-400 border-dashed rounded-md p-4 py-10 my-4 hover:border-orange-500
+                      hover:text-red-700 cursor-pointer transition-colors'>
 
                     {resume ? (
-                      <p className='text-green-700'>{resume.name}</p>
+                      <p className='text-red-700'>{resume.name}</p>
                     ) : (
                       <>
                         <UploadCloud className='size-14 stroke-1' />
@@ -215,8 +215,8 @@ bg-clip-text text-transparent sm:hidden">Welcome, Joe Doe</p>
                 </label>
                 <input type="file" id="resume-input" accept=".pdf,.doc,.docx" hidden onChange={(e) => setResume(e.target.files[0])} />
               </div>
-              <button disabled={isLoading} className='w-full py-2 bg-green-600 text-white rounded
-                hover:bg-green-700 transition-colors flex items-center justify-center gap-2'>
+              <button disabled={isLoading} className='w-full py-2 bg-red-600 text-white rounded
+                hover:bg-orange-700 transition-colors flex items-center justify-center gap-2'>
                 {isLoading && <LoaderCircleIcon className='animate-spin size-4 text-white' />}
                 {isLoading ? 'Uploading...' : 'Upload Resume'}
               </button>

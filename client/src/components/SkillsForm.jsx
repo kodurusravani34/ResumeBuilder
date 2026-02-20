@@ -41,8 +41,8 @@ const SkillsForm = ({ data, onChange }) => {
             onKeyDown={handleKeyPress}
             />
             <button onClick={addSkill} disabled={!newSkill.trim} className='flex
-                items-center gap-2 px-4 py-2 text-sm bg-blue-600 text-white rounded-lg
-                hover:bg-blue-700 transition-colors disabled:opacity-50
+                items-center gap-2 px-4 py-2 text-sm bg-red-600 text-white rounded-lg
+                hover:bg-orange-700 transition-colors disabled:opacity-50
                 disabled:cursor-not-allowed'>
                 <Plus className="size-4"/> Add
             </button>
@@ -52,10 +52,10 @@ const SkillsForm = ({ data, onChange }) => {
             <div className='flex flex-wrap gap-2'>
                 {data.map((skill, index)=>(
                     <span key={index} className='flex items-center gap-1 px-3 py-1
-                    bg-blue-100 text-blue-800 rounded-full text-sm'>
+                    bg-orange-100 text-red-800 rounded-full text-sm'>
                     {skill}
                         <button onClick={()=> removeSkill(index)} className="ml-1
-                        hover:bg-blue-200 rounded-full p-0.5 transition-colors">
+                        hover:bg-orange-200 rounded-full p-0.5 transition-colors">
                             <X className="w-3 h-3" />
                         </button>
                     </span>
@@ -71,8 +71,8 @@ const SkillsForm = ({ data, onChange }) => {
         </div>
         )}
 
-        <div className='bg-blue-50 p-3 rounded-lg'>
-            <p className='text-sm text-blue-800'><strong>Tip:</strong> Add 8-12
+        <div className='bg-orange-50 p-3 rounded-lg'>
+            <p className='text-sm text-red-800'><strong>Tip:</strong> Add 8-12
             relevant skills. Include both technical skills (programming languages, tools) and soft skills (leadership, communication).</p>
         </div>
 

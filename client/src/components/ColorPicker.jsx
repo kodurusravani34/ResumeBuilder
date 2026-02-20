@@ -8,7 +8,7 @@ const ColorPicker = ({selectedColor, onChange }) => {
         { name: "Blue", value: "#3B82F6"},
         { name: "Indigo", value: "#6366F1" },
         { name: "Purple", value: "#8B5CF6" },
-        { name: "Green", value: "#108981" },
+        // { name: "Green", value: "#108981" },
         { name: "Red", value: "#EF4444"},
         { name: "Orange", value: "#F97316"},
         { name: "Teal", value: "#008080"},
